@@ -12,7 +12,7 @@ This is a modification of sndcpy and scrcpy with a script. It allows you to take
 
 # Example
 
-![output](https://user-images.githubusercontent.com/56124831/139525314-f92827ed-f98c-41f8-8e27-f225ff3c2d47.gif)
+![output](https://user-images.githubusercontent.com/56124831/139525406-11571cd8-5d95-4086-82bf-f0828f423dfa.gif)
 
 ## Requirements:
 1. The script uses yay to get scrcpy from the AUR, so you'll need to be on Arch
