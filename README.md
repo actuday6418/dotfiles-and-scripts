@@ -12,8 +12,8 @@ This is a modification of sndcpy and scrcpy with a script. It allows you to take
 
 ## Requirements:
 1. The script uses yay to get scrcpy from the AUR, so you'll need to be on Arch
-2. VLC
-3. ADB tools
+2. VLC ```pacman -S vlc```
+3. ADB tools ```pacman -S adb-tools```
 4. Root permissions for running the install script
 
 ## Usage
