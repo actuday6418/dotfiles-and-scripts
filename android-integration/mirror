@@ -1,0 +1,29 @@
+#!/bin/bash
+
+#Exit gracefully
+exit_script() {
+    trap - SIGINT SIGTERM # clear the trap
+    kill -- -$$ # Sends SIGTERM to child/sub processes
+}
+
+trap exit_script SIGINT SIGTERM
+
+devices=$(adb devices)
+devices=$(echo -e "$devices" | tail -1)
+
+if [ "$devices" == "List of devices attached" ]; then
+  echo "No devices found!"
+  exit
+else 
+  echo -e "Device found..\nMuting it.."
+  adb shell input keyevent 164
+  sndcpy &
+  sndcpy_pid=$!
+  scrcpy &
+  scrcpy_pid=$!
+  wait $scrcpy_pid
+  kill $sndcpy_pid
+  echo -e "Unmuting the device.."
+  adb shell input keyevent 164
+  echo -e "Exiting.."
+fi
