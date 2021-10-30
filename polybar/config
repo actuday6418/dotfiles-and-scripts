@@ -34,7 +34,7 @@ border-color = #00000000
 module-margin-left = 1
 module-margin-right = 1
 modules-center = xwindow
-modules-right = kdeconnect cpu memory volume network_upload network_download date battery
+modules-right = kdeconnect cpu memory volume network_upload network_download date battery android
 modules-left = i3
 
 [module/memory]
@@ -147,3 +147,8 @@ type = internal/cpu
 interval = 0.5
 format = <label>
 label =  %percentage%%
+
+[module/android]
+type = custom/script
+exec = echo "  "
+click-left = scripts/mirror.sh
