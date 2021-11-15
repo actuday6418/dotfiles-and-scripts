@@ -1,3 +1,12 @@
+# Daily verse
+A Bash plus Python script that overlays a random bible verse onto your wallpaper and sets it using feh whenever you run the script (like on boot, or map the script to a Polybar button).
+
+## Usage
+You may call the script from your i3 config or whatever. Place your default wallpaper in the same directory as the script, named wallpaper.png, and you're good to go.
+
+## Credits
+All image manipulation uses the awesome imagemagick utility, and the json file for the NKJV Bible is from https://github.com/jplehmann/textbites. 
+
 # KDEConnect wrapper
 A slim bash script that wraps around kdeconnect-cli to simplify sharing files to other devices from the comfort of the terminal
 
@@ -22,4 +31,6 @@ This is a modification of sndcpy and scrcpy with a script. It allows you to take
 
 # i3 and Polybar dotfiles
 Try them. They're good.
+
+
 
